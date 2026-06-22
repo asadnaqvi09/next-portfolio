@@ -6,7 +6,7 @@
     "category": "E-Commerce",
     "year": "2025",
     "thumbnail": "/assets/image-1.jpg",
-    "liveUrl": "https://baazarly.example.com",
+    "liveUrl": "https://bazaarly-frontend.vercel.app/",
     "stack": ["Next.js", "Node.js", "PostgreSQL", "Tailwind CSS"],
     "summary": "Baazarly is a modern ecommerce platform built for smooth shopping experiences, scalable catalog management, and a polished customer journey from browse to checkout.",
     "sections": [
@@ -48,7 +48,7 @@
     "category": "Ed Tech · IELTS & PTE",
     "year": "2025",
     "thumbnail": "/assets/image-3.jpg",
-    "liveUrl": "https://testiva.example.com",
+    "liveUrl": "https://github.com/asadnaqvi09/Testiva---AI-Powered-IELTS-and-PTE-Preparation",
     "stack": ["React", "Node.js", "PostgreSQL", "Socket.io"],
     "summary": "Testiva is an ed-tech platform for IELTS and PTE preparation, offering mock tests, AI-driven feedback, and structured study paths for learners aiming for high band scores.",
     "sections": [
@@ -90,7 +90,7 @@
     "category": "UI/UX Design",
     "year": "2025",
     "thumbnail": "/assets/image-2.jpg",
-    "liveUrl": "https://figma.com/design/eventiy",
+    "liveUrl": "https://www.figma.com/design/lKqVKvXZ69ffJhMrlQqtnz/Eventiy?m=auto&fuid=1620492640767933793",
     "liveLabel": "View Figma",
     "stack": ["Figma", "Design Systems", "Prototyping"],
     "summary": "Eventiy is a UI/UX design concept for event discovery and booking, focused on bold visuals, smooth interactions, and standout storytelling for modern event platforms.",
