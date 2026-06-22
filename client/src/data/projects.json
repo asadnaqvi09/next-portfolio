@@ -1,0 +1,129 @@
+[
+  {
+    "id": "baazarly",
+    "slug": "baazarly",
+    "title": "Baazarly",
+    "category": "E-Commerce",
+    "year": "2025",
+    "thumbnail": "/assets/image-1.jpg",
+    "liveUrl": "https://baazarly.example.com",
+    "stack": ["Next.js", "Node.js", "PostgreSQL", "Tailwind CSS"],
+    "summary": "Baazarly is a modern ecommerce platform built for smooth shopping experiences, scalable catalog management, and a polished customer journey from browse to checkout.",
+    "sections": [
+      {
+        "heading": "About the Project",
+        "paragraphs": [
+          "Baazarly is a refined digital commerce platform crafted for modern brands that value clarity, performance, and strong visual presence. Built with versatility in mind, it adapts seamlessly across product categories and seller workflows.",
+          "At its core, Baazarly is about balance. It blends bold structure with subtle sophistication, creating a shopping experience that feels both contemporary and trustworthy."
+        ]
+      },
+      {
+        "heading": "Designing for Impact, Built for Flexibility",
+        "paragraphs": [
+          "The goal behind Baazarly was to create a system that does not just look good, but performs. Every section is intentionally structured to guide attention, highlight key products, and support conversion without overwhelming the user.",
+          "The result is a platform that feels confident, clean, and highly adaptable for growing ecommerce businesses."
+        ]
+      },
+      {
+        "heading": "Visual Language",
+        "paragraphs": [
+          "Baazarly uses a minimal yet striking visual approach. Strong typography anchors the layout, while generous spacing and structured grids create rhythm and clarity across product listings and detail pages.",
+          "Subtle contrasts and refined alignments bring a sense of precision, helping products stand out without unnecessary decoration."
+        ]
+      },
+      {
+        "heading": "Built for Real Use",
+        "paragraphs": [
+          "Beyond aesthetics, Baazarly is highly practical. It is optimized for performance, responsiveness, and ease of management. Every component is reusable and scalable, allowing sellers to expand catalogs and maintain consistency without friction."
+        ]
+      }
+    ],
+    "featured": true,
+    "order": 1
+  },
+  {
+    "id": "testiva",
+    "slug": "testiva",
+    "title": "Testiva",
+    "category": "Ed Tech · IELTS & PTE",
+    "year": "2025",
+    "thumbnail": "/assets/image-3.jpg",
+    "liveUrl": "https://testiva.example.com",
+    "stack": ["React", "Node.js", "PostgreSQL", "Socket.io"],
+    "summary": "Testiva is an ed-tech platform for IELTS and PTE preparation, offering mock tests, AI-driven feedback, and structured study paths for learners aiming for high band scores.",
+    "sections": [
+      {
+        "heading": "About the Project",
+        "paragraphs": [
+          "Testiva is a comprehensive training platform designed for students preparing for IELTS and PTE exams. It combines structured mock tests with intelligent feedback to help learners identify strengths and close skill gaps efficiently.",
+          "The platform is built around clarity and progress tracking, giving students and instructors a shared view of performance over time."
+        ]
+      },
+      {
+        "heading": "Structured Learning Paths",
+        "paragraphs": [
+          "Each module is designed to flow naturally from diagnostic assessment to targeted practice. Sections build on one another, making it easy to present skills, track improvement, and communicate results in a clear and compelling way.",
+          "This structure ensures that users not only practice, but understand and connect with their learning journey."
+        ]
+      },
+      {
+        "heading": "Performance & Feedback",
+        "paragraphs": [
+          "Testiva integrates evaluation workflows for writing and speaking sections, returning structured scores and actionable corrections. Historical data feeds personalized study recommendations tailored to each learner's profile.",
+          "The system is optimized for responsiveness, offline-capable test flows, and reliable sync when connectivity returns."
+        ]
+      },
+      {
+        "heading": "A Foundation for Growth",
+        "paragraphs": [
+          "Testiva is more than a test app. It is a system designed to evolve with learners and institutions, supporting new test formats, expanded content libraries, and refined analytics without losing product integrity."
+        ]
+      }
+    ],
+    "featured": true,
+    "order": 2
+  },
+  {
+    "id": "eventiy",
+    "slug": "eventiy",
+    "title": "Eventiy",
+    "category": "UI/UX Design",
+    "year": "2025",
+    "thumbnail": "/assets/image-2.jpg",
+    "liveUrl": "https://figma.com/design/eventiy",
+    "liveLabel": "View Figma",
+    "stack": ["Figma", "Design Systems", "Prototyping"],
+    "summary": "Eventiy is a UI/UX design concept for event discovery and booking, focused on bold visuals, smooth interactions, and standout storytelling for modern event platforms.",
+    "sections": [
+      {
+        "heading": "About the Project",
+        "paragraphs": [
+          "Eventiy is a refined digital design concept crafted for modern event brands that value clarity, elegance, and strong visual presence. Built with versatility in mind, it adapts seamlessly across concerts, conferences, and local gatherings.",
+          "At its core, Eventiy is about balance. It blends bold structure with subtle sophistication, creating a foundation that feels both contemporary and timeless."
+        ]
+      },
+      {
+        "heading": "Visual Language",
+        "paragraphs": [
+          "Eventiy uses a minimal yet striking visual approach. Strong typography anchors the layout, while generous spacing and structured grids create rhythm and clarity throughout the experience.",
+          "The color system is intentionally restrained, allowing brands to customize while maintaining a polished and cohesive look."
+        ]
+      },
+      {
+        "heading": "Structured Storytelling",
+        "paragraphs": [
+          "The layout is designed to flow naturally from discovery to deeper engagement. Each screen builds on the previous one, making it easy to browse events, explore details, and complete bookings in a clear and compelling way.",
+          "This structure ensures that users not only explore, but understand and connect with the content."
+        ]
+      },
+      {
+        "heading": "Clarity that Scales with You",
+        "paragraphs": [
+          "Every element within Eventiy is crafted to serve a purpose, bringing together design and function in a way that feels effortless. It empowers brands to present events with confidence, precision, and lasting impact."
+        ]
+      }
+    ],
+    "featured": true,
+    "order": 3
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "id": "ui-ux",
+    "title": "UI/UX Design",
+    "tags": ["Wireframes", "Prototyping", "Figma"],
+    "description": "User-centered interfaces and flows from research and wireframes to polished, testable prototypes that align with brand and user goals."
+  },
+  {
+    "id": "frontend",
+    "title": "Frontend Development",
+    "tags": ["React", "Next.js", "Responsive UI","Tailwind CSS"],
+    "description": "Fast, accessible frontends with modern stacks, responsive layouts, and performance tuned for real-world use."
+  },
+  {
+    "id": "backend",
+    "title": "Backend Development",
+    "tags": ["Node.js", "PostgreSQL", "REST APIs", "Express", "MongoDB"],
+    "description": "Reliable APIs, database design, and server logic built for scale, security, and long-term maintainability."
+  }
+]

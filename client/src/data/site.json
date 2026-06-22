@@ -1,0 +1,14 @@
+{
+  "name": "Asad Abbas",
+  "title": "Full Stack Developer",
+  "tagline": "Hey! I'm Asad, a builder focused on clean, scalable digital products.",
+  "about": "I'm a full stack developer with a strong focus on building modern, scalable, and conversion-driven web experiences. Over the years, I've shipped products across ecommerce, ed-tech, and product design helping teams launch faster with clarity, structured systems, and intentional design.",
+  "scrollText": "From idea to launch. Clean, scalable digital products built to move fast, stay simple, and perform in real-world use, driven by clarity, structured systems, and intentional design.",
+  "email": "asadabbas@example.com",
+  "resumePath": "/assets/Asad_Abbas.pdf",
+  "socials": {
+    "linkedin": "https://www.linkedin.com/in/asad-naqvi-84ba14282/",
+    "github": "https://github.com/asadnaqvi09",
+    "instagram": "https://www.instagram.com/asadnaqvi09/"
+  }
+}
