@@ -2,9 +2,7 @@
 
 A full-stack personal portfolio built with **Next.js** and **Node.js/Express**, featuring smooth scroll animations, JSON-driven project pages, a contact API, and an admin analytics dashboard.
 
-**Live Demo:** _Add your deployed portfolio URL here_
-
-**API URL:** _Add your deployed API URL here_
+**Live Demo:** https://next-portfolio-ecru-five.vercel.app/
 
 ---
 
