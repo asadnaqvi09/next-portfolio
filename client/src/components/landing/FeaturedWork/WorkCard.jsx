@@ -1,13 +1,11 @@
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import ImageWithSkeleton from "@/components/ui/ImageWithSkeleton";
 
-export default function ProductCard({ project }) {
+export default function WorkCard({ project }) {
+  const liveLabel = project.liveLabel || "Live Link";
+
   return (
-    <Link
-      href={`/work/${project.slug}`}
-      className="group block overflow-hidden rounded-2xl border border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900"
-    >
+    <article className="group overflow-hidden rounded-2xl border border-neutral-200 bg-white dark:border-neutral-800 dark:bg-neutral-900">
       <div className="relative aspect-[16/10] overflow-hidden">
         <ImageWithSkeleton
           src={project.thumbnail}
@@ -27,8 +25,19 @@ export default function ProductCard({ project }) {
             {project.category} · {project.year}
           </p>
         </div>
-        <ArrowUpRight className="mt-1 h-5 w-5 shrink-0 text-neutral-400 transition-colors duration-300 group-hover:text-neutral-900 dark:group-hover:text-neutral-100" />
+        <a
+          href={project.liveUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${liveLabel} — ${project.title}`}
+          className="group/link mt-1 flex shrink-0 items-center gap-2 text-neutral-400 transition-colors duration-300 hover:text-neutral-900 dark:hover:text-neutral-100"
+        >
+          <span className="pointer-events-none hidden overflow-hidden text-sm font-medium whitespace-nowrap opacity-0 transition-all duration-300 group-hover/link:opacity-100 md:inline-block md:max-w-0 md:group-hover/link:max-w-24">
+            {liveLabel}
+          </span>
+          <ArrowUpRight className="h-5 w-5 shrink-0" />
+        </a>
       </div>
-    </Link>
+    </article>
   );
 }

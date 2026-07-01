@@ -1,7 +1,7 @@
 import HeroSection from "@/components/landing/Hero/HeroSection";
 import AboutSection from "@/components/landing/About/AboutSection";
 import ServicesSection from "@/components/landing/Services/ServicesSection";
-import FeaturedSection from "@/components/landing/FeaturedProducts/FeaturedSection";
+import FeaturedWorkSection from "@/components/landing/FeaturedWork/FeaturedWorkSection";
 import ContactSection from "@/components/landing/Contact/ContactSection";
 
 export default function HomePage() {
@@ -10,7 +10,7 @@ export default function HomePage() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
-      <FeaturedSection />
+      <FeaturedWorkSection />
       <ContactSection />
     </div>
   );

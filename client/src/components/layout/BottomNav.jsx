@@ -36,8 +36,6 @@ export default function BottomNav() {
   const lenis = useLenis();
   const isHome = pathname === "/";
 
-  if (pathname.startsWith("/work")) return null;
-
   const handleNav = (id) => {
     if (!lenis) return;
     lenis.scrollTo(`#${id}`, { offset: SCROLL_OFFSET });
