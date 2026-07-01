@@ -20,13 +20,12 @@
     "order": 2
   },
   {
-    "id": "eventiy",
-    "title": "Eventiy",
-    "category": "UI/UX Design",
-    "year": "2025",
+    "id": "game-vault",
+    "title": "Game Vault",
+    "category": "E-Commerce",
+    "year": "2026",
     "thumbnail": "/assets/image-2.jpg",
-    "liveUrl": "https://www.figma.com/design/lKqVKvXZ69ffJhMrlQqtnz/Eventiy?m=auto&fuid=1620492640767933793",
-    "liveLabel": "View Figma",
+    "liveUrl": "https://game-vault-nextjs.vercel.app/",
     "featured": true,
     "order": 3
   }
