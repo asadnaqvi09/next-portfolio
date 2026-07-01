@@ -10,12 +10,12 @@
     "order": 1
   },
   {
-    "id": "testiva",
-    "title": "Testiva",
-    "category": "Ed Tech · IELTS & PTE",
+    "id": "dental",
+    "title": "Denture-Dental",
+    "category": "Dental Clinic",
     "year": "2025",
     "thumbnail": "/assets/image-3.jpg",
-    "liveUrl": "https://github.com/asadnaqvi09/Testiva---AI-Powered-IELTS-and-PTE-Preparation",
+    "liveUrl": "https://dental-website-mern.vercel.app/",
     "featured": true,
     "order": 2
   },
