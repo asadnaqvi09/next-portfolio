@@ -2,7 +2,6 @@
 
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef } from "react";
 import Lenis from "lenis";
-import { gsap, ScrollTrigger } from "@/lib/gsap";
 import { prefersReducedMotion, SCROLL_OFFSET } from "@/lib/motion";
 
 const LenisContext = createContext(null);
@@ -16,26 +15,18 @@ export default function LenisProvider({ children }) {
 
   useEffect(() => {
     if (prefersReducedMotion()) return;
-
     const lenis = new Lenis({
       duration: 1.1,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
     });
     lenisRef.current = lenis;
-
-    lenis.on("scroll", ScrollTrigger.update);
-
-    const update = (time) => {
-      lenis.raf(time * 1000);
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
     };
-    gsap.ticker.add(update);
-    gsap.ticker.lagSmoothing(0);
-
-    ScrollTrigger.refresh();
-
+    requestAnimationFrame(raf);
     return () => {
-      gsap.ticker.remove(update);
       lenis.destroy();
       lenisRef.current = null;
     };

@@ -1,7 +1,20 @@
+import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import ClientProviders from "@/components/providers/ClientProviders";
 import AppShell from "@/components/layout/AppShell";
 import { site } from "@/lib/content";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-plus-jakarta",
+  display: "swap",
+});
 
 export const metadata = {
   title: `${site.name} | ${site.title}`,
@@ -14,14 +27,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <link
-          href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="min-h-screen antialiased">
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${outfit.variable} ${plusJakarta.variable}`}
+    >
+      <body className="flex min-h-dvh flex-col antialiased">
         <ClientProviders>
           <AppShell>{children}</AppShell>
         </ClientProviders>

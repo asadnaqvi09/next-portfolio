@@ -8,6 +8,9 @@ import { setCredentials } from "@/store/features/authSlice";
 import { persistAuth } from "@/store/authStorage";
 import Skeleton from "@/components/ui/Skeleton";
 
+const inputClass =
+  "w-full rounded-[var(--radius-sm)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] px-4 py-3 font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--color-text-primary)] outline-none transition placeholder:text-[var(--color-text-muted)] focus:border-[var(--color-primary)]";
+
 export default function LoginForm() {
   const router = useRouter();
   const dispatch = useAppDispatch();
@@ -33,9 +36,15 @@ export default function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-md space-y-5">
+    <form
+      onSubmit={handleSubmit}
+      className="w-full max-w-md space-y-5 rounded-[var(--radius-lg)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-8 shadow-[var(--shadow-sm)]"
+    >
       <div>
-        <label htmlFor="admin-email" className="mb-2 block text-sm text-neutral-600 dark:text-neutral-400">
+        <label
+          htmlFor="admin-email"
+          className="mb-2 block font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--color-text-secondary)]"
+        >
           Email
         </label>
         <input
@@ -44,11 +53,14 @@ export default function LoginForm() {
           required
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
-          className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm outline-none focus:border-neutral-400 dark:border-neutral-800 dark:bg-neutral-900 dark:focus:border-neutral-600"
+          className={inputClass}
         />
       </div>
       <div>
-        <label htmlFor="admin-password" className="mb-2 block text-sm text-neutral-600 dark:text-neutral-400">
+        <label
+          htmlFor="admin-password"
+          className="mb-2 block font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--color-text-secondary)]"
+        >
           Password
         </label>
         <input
@@ -57,14 +69,16 @@ export default function LoginForm() {
           required
           value={form.password}
           onChange={(e) => setForm({ ...form, password: e.target.value })}
-          className="w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm outline-none focus:border-neutral-400 dark:border-neutral-800 dark:bg-neutral-900 dark:focus:border-neutral-600"
+          className={inputClass}
         />
       </div>
-      {error && <p className="text-sm text-red-600 dark:text-red-400">{error}</p>}
+      {error ? (
+        <p className="font-[family-name:var(--font-plus-jakarta)] text-sm text-red-500">{error}</p>
+      ) : null}
       <button
         type="submit"
         disabled={isLoading}
-        className="w-full rounded-full bg-neutral-900 py-3 text-sm font-medium text-white transition hover:bg-neutral-800 disabled:opacity-60 dark:bg-neutral-100 dark:text-neutral-900"
+        className="w-full cursor-pointer rounded-full bg-[var(--color-primary)] py-3 font-[family-name:var(--font-plus-jakarta)] text-sm font-semibold text-[var(--color-text-inverse)] transition hover:bg-[var(--color-primary-hover)] disabled:opacity-60"
       >
         {isLoading ? "Signing in..." : "Sign In"}
       </button>
@@ -74,7 +88,7 @@ export default function LoginForm() {
 
 export function LoginFormSkeleton() {
   return (
-    <div className="w-full max-w-md space-y-5">
+    <div className="w-full max-w-md space-y-5 rounded-[var(--radius-lg)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-8">
       <Skeleton className="h-12 w-full" />
       <Skeleton className="h-12 w-full" />
       <Skeleton className="h-12 w-full rounded-full" />

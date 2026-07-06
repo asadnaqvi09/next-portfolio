@@ -4,7 +4,7 @@ export default function Skeleton({ className }) {
   return (
     <div
       className={cn(
-        "animate-pulse rounded-lg bg-neutral-200 dark:bg-neutral-800",
+        "animate-pulse rounded-[var(--radius-sm)] bg-[var(--color-surface-alt)]",
         className
       )}
     />

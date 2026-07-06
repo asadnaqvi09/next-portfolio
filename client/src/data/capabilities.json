@@ -1,0 +1,30 @@
+[
+  {
+    "id": "full-stack",
+    "title": "Full Stack Applications",
+    "description": "Secure full-stack apps with user logins, databases, and third-party integrations built-in.",
+    "icon": "panels-top-left",
+    "accent": "primary"
+  },
+  {
+    "id": "landing-pages",
+    "title": "Landing Pages",
+    "description": "Clean, responsive pages designed to convert — on every screen size.",
+    "icon": "monitor",
+    "accent": "teal"
+  },
+  {
+    "id": "ui-ux",
+    "title": "UI/UX Design",
+    "description": "User-centered interfaces from wireframes to polished prototypes that align with brand and user goals.",
+    "icon": "panel-right-open",
+    "accent": "primary"
+  },
+  {
+    "id": "ai",
+    "title": "AI Integrations",
+    "description": "Practical AI — text analysis, task generation, data extraction — built directly into your app.",
+    "icon": "cpu",
+    "accent": "muted"
+  }
+]

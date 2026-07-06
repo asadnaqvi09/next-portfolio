@@ -1,53 +1,56 @@
-"use client";
-
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "@/lib/gsap";
-import { prefersReducedMotion } from "@/lib/motion";
-import { site } from "@/lib/content";
 import Container from "@/components/ui/Container";
-import HeroPortrait from "@/components/landing/Hero/HeroPortrait";
 import HeroCTA from "@/components/landing/Hero/HeroCTA";
+import { site } from "@/lib/content";
 
 export default function HeroSection() {
-  const sectionRef = useRef(null);
-
-  useGSAP(
-    () => {
-      if (prefersReducedMotion()) return;
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-      tl.from(".hero-label", { y: 30, opacity: 0, duration: 0.8 })
-        .from(".hero-name", { y: 40, opacity: 0, duration: 0.9 }, "-=0.5")
-        .from(".hero-title", { y: 30, opacity: 0, duration: 0.8 }, "-=0.5")
-        .from(".hero-tagline", { y: 20, opacity: 0, duration: 0.7 }, "-=0.4")
-        .from(".hero-cta", { y: 20, opacity: 0, duration: 0.7 }, "-=0.3")
-        .from(".hero-portrait", { scale: 0.95, opacity: 0, duration: 1 }, "-=0.8");
-    },
-    { scope: sectionRef }
-  );
-
   return (
-    <section id="hero" ref={sectionRef} className="scroll-mt-24 py-8">
-      <Container className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-16">
-        <div className="flex-1 space-y-6">
-          <p className="hero-label text-xs font-medium uppercase tracking-[0.25em] text-neutral-500 dark:text-neutral-400">
-            / Creating since 2020
-          </p>
-          <h1 className="hero-name text-5xl font-semibold tracking-tight text-neutral-900 dark:text-neutral-50 md:text-6xl lg:text-7xl">
-            {site.name}
-          </h1>
-          <p className="hero-title text-sm font-medium uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400 md:text-base">
-            {site.title}
-          </p>
-          <p className="hero-tagline max-w-[60ch] text-lg leading-relaxed text-neutral-600 dark:text-neutral-300 md:text-xl">
-            {site.tagline}
-          </p>
-          <div className="hero-cta">
-            <HeroCTA />
-          </div>
+    <section
+      id="hero"
+      className="relative flex min-h-dvh flex-col items-center justify-center overflow-hidden pt-32 pb-24 md:pt-36 md:pb-32"
+    >
+      <Container className="text-center">
+        <div
+          className="animate-fade-up mb-8 inline-flex items-center gap-2 rounded-full border border-[rgba(230,95,43,0.25)] bg-[var(--color-primary-light)] px-4 py-1 font-[family-name:var(--font-plus-jakarta)] text-xs font-semibold tracking-widest text-[var(--color-primary)] uppercase"
+          style={{ animationDelay: "0.1s" }}
+        >
+          <span className="h-1.5 w-1.5 rounded-full bg-[var(--color-primary)] animate-pulse-dot" />
+          {site.hero.eyebrow}
         </div>
-        <div className="hero-portrait flex-1">
-          <HeroPortrait />
+        <h1 className="mb-8 animate-fade-up" style={{ animationDelay: "0.2s" }}>
+          {site.hero.headline.map((line) => (
+            <span
+              key={line}
+              className="block font-[family-name:var(--font-outfit)] text-[clamp(2.8rem,5.5vw,5rem)] leading-[1.15] font-bold tracking-[-0.03em] text-[var(--color-text-primary)]"
+            >
+              {line}
+            </span>
+          ))}
+        </h1>
+        <p
+          className="mx-auto mb-10 max-w-[560px] animate-fade-up font-[family-name:var(--font-plus-jakarta)] text-base leading-[1.55] font-normal text-[var(--color-text-secondary)]"
+          style={{ animationDelay: "0.34s" }}
+        >
+          {site.hero.subtext}
+        </p>
+        <div className="mb-16 animate-fade-up" style={{ animationDelay: "0.48s" }}>
+          <HeroCTA />
+        </div>
+        <div
+          className="flex animate-fade-up flex-wrap items-center justify-center gap-2"
+          style={{ animationDelay: "0.6s" }}
+        >
+          {site.techPills.map((pill) => (
+            <span
+              key={pill.label}
+              className="inline-flex items-center gap-2 rounded-full border border-[var(--color-border-subtle)] bg-[var(--color-surface)] px-3 py-1 font-[family-name:var(--font-plus-jakarta)] text-xs font-medium text-[var(--color-text-secondary)] transition-[border-color,box-shadow] duration-[var(--duration-fast)] ease-[var(--ease-smooth)] hover:border-[var(--color-primary)] hover:shadow-[var(--shadow-glow)]"
+            >
+              <span
+                className="h-1.5 w-1.5 shrink-0 rounded-full"
+                style={{ background: pill.color }}
+              />
+              {pill.label}
+            </span>
+          ))}
         </div>
       </Container>
     </section>

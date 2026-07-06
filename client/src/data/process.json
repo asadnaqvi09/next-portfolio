@@ -1,0 +1,32 @@
+[
+  {
+    "number": "01",
+    "title": "Fast Delivery via AI-Assisted Coding",
+    "description": "I guide AI in safe, step-by-step edits to write clean code quickly — stable, bug-free, and fast."
+  },
+  {
+    "number": "02",
+    "title": "Clean & Modular Architecture",
+    "description": "UI stays separate from backend logic, making handovers easy and future updates simple."
+  },
+  {
+    "number": "03",
+    "title": "Security-First Practices",
+    "description": "I build with defense-in-depth: database-level user isolation, validated inputs, and secure session handling that keeps every user's data locked down."
+  },
+  {
+    "number": "04",
+    "title": "Performance & Optimization",
+    "description": "Server-side rendering, smart caching, and optimized assets so your app loads in under a second and scores top marks on Lighthouse — out of the box."
+  },
+  {
+    "number": "05",
+    "title": "SEO-First Development",
+    "description": "I build SEO into every page — dynamic metadata, structured data, and auto-generated sitemaps — so search engines index your content without extra work."
+  },
+  {
+    "number": "06",
+    "title": "Smooth UX & Micro-Animations",
+    "description": "Fluid user journeys, responsive layouts, and micro-interactions that feel premium and interactive."
+  }
+]

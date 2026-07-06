@@ -1,0 +1,26 @@
+[
+  {
+    "question": "What is your typical timeline for delivering an MVP?",
+    "answer": "Most MVPs ship in 2–4 weeks depending on scope. I break work into focused sprints with clear milestones so you see progress early and can give feedback before the final launch."
+  },
+  {
+    "question": "Who owns the code once the project is completed?",
+    "answer": "You do. Once the project is paid and delivered, you receive full ownership of the codebase, assets, and deployment configuration."
+  },
+  {
+    "question": "How do you ensure the security of my application?",
+    "answer": "I follow defense-in-depth: parameterized database queries, validated inputs, secure session handling, environment-based secrets, and role-based access where needed."
+  },
+  {
+    "question": "What does your primary tech stack look like?",
+    "answer": "Next.js, React, TypeScript, Tailwind CSS, PostgreSQL, Node.js, and Express on the backend. I also work with Supabase, Redis, and common auth and analytics tools."
+  },
+  {
+    "question": "How do we communicate during the sprint?",
+    "answer": "We stay aligned through async updates and scheduled check-ins. You get clear progress notes, preview links, and direct channels for questions throughout the build."
+  },
+  {
+    "question": "What happens after the app is launched?",
+    "answer": "I provide a clean handover with documentation. Ongoing support, feature additions, or maintenance can be arranged as a separate engagement if you need it."
+  }
+]

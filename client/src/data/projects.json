@@ -2,31 +2,76 @@
   {
     "id": "baazarly",
     "title": "Baazarly",
+    "subtitle": "Modern E-Commerce Platform",
     "category": "E-Commerce",
     "year": "2025",
     "thumbnail": "/assets/image-1.jpg",
     "liveUrl": "https://bazaarly-frontend.vercel.app/",
+    "githubUrl": "https://github.com/asadnaqvi09/GroceryShop-MernStack",
     "featured": true,
-    "order": 1
+    "order": 1,
+    "filters": ["Website"],
+    "description": "A full-featured ecommerce storefront with product browsing, cart management, and a responsive shopping experience built for performance across devices.",
+    "tags": ["Next.js", "React", "Tailwind CSS", "Node.js", "MongoDB", "Redux Toolkit"]
   },
   {
     "id": "dental",
     "title": "Denture-Dental",
+    "subtitle": "Dental Clinic Landing Page",
     "category": "Dental Clinic",
     "year": "2025",
     "thumbnail": "/assets/image-3.jpg",
     "liveUrl": "https://dental-website-mern.vercel.app/",
+    "githubUrl": "https://github.com/asadnaqvi09/dental-website-MERN",
     "featured": true,
-    "order": 2
+    "order": 2,
+    "filters": ["Website"],
+    "description": "A conversion-focused clinic website with service highlights, appointment flows, and a clean layout designed to build patient trust.",
+    "tags": ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"]
   },
   {
     "id": "game-vault",
     "title": "Game Vault",
+    "subtitle": "Digital Games Marketplace",
     "category": "E-Commerce",
     "year": "2026",
     "thumbnail": "/assets/image-2.jpg",
     "liveUrl": "https://game-vault-nextjs.vercel.app/",
+    "githubUrl": "https://github.com/asadnaqvi09/GameVault--nextjs",
     "featured": true,
-    "order": 3
+    "order": 3,
+    "filters": ["Website"],
+    "description": "An ecommerce platform for digital game keys with catalog browsing, cart checkout, and an admin-friendly product management flow.",
+    "tags": ["Next.js", "JavaScript", "Tailwind CSS", "PostgreSQL"]
+  },
+  {
+    "id": "edtech-app",
+    "title": "Testiva - EdTech App",
+    "subtitle": "AI-Powered IELTS and PTE Preparation App",
+    "category": "EdTech",
+    "year": "In-Progress",
+    "thumbnail": "/assets/image-2.jpg",
+    "liveUrl": "https://github.com/asadnaqvi09/Testiva---AI-Powered-IELTS-and-PTE-Preparation",
+    "githubUrl": "https://github.com/asadnaqvi09/Testiva---AI-Powered-IELTS-and-PTE-Preparation",
+    "featured": true,
+    "order": 4,
+    "filters": ["App"],
+    "description": "Testiva is B2C Mobile App Designed To Solve High Cost Issues Students Face when they started to prepare for IELTS and PTE.",
+    "tags": ["Flutter", "Node.js", "Express", "PostgreSQL", "Tailwind CSS"]
+  },
+  {
+    "id": "edtech-admin_panel",
+    "title": "Testiva - Admin Panel",
+    "subtitle": "Admin Panel for Testiva",
+    "category": "EdTech",
+    "year": "In-Progress",
+    "thumbnail": "/assets/image-2.jpg",
+    "liveUrl": "https://github.com/asadnaqvi09/Testiva---AI-Powered-IELTS-and-PTE-Preparation/tree/main/Admin-Prototype",
+    "githubUrl": "https://github.com/asadnaqvi09/Testiva---AI-Powered-IELTS-and-PTE-Preparation/tree/main/Admin-Prototype",
+    "featured": true,
+    "order": 5,
+    "filters": ["Dashboard"],
+    "description": "Admin Panel for Testiva App to manage users, courses, and payments.",
+    "tags": ["React", "Node.js", "Express", "PostgreSQL", "Tailwind CSS"]
   }
 ]

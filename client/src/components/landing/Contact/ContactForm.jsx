@@ -28,13 +28,16 @@ export default function ContactForm() {
   };
 
   const inputClass =
-    "w-full rounded-xl border border-neutral-700 bg-neutral-900 px-4 py-3.5 text-sm text-neutral-100 outline-none transition placeholder:text-neutral-500 focus:border-neutral-500 dark:border-neutral-600 dark:bg-neutral-950 dark:focus:border-neutral-400";
+    "w-full rounded-[var(--radius-sm)] border border-[var(--panel-input-border)] bg-[var(--panel-input-bg)] px-4 py-3.5 font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--panel-input-text)] outline-none transition placeholder:text-[var(--panel-input-placeholder)] focus:border-[var(--color-primary)]";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-2 block text-sm text-neutral-300 dark:text-neutral-200">
+          <label
+            htmlFor="name"
+            className="mb-2 block font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--panel-label)]"
+          >
             Name
           </label>
           <input
@@ -48,7 +51,10 @@ export default function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="email" className="mb-2 block text-sm text-neutral-300 dark:text-neutral-200">
+          <label
+            htmlFor="email"
+            className="mb-2 block font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--panel-label)]"
+          >
             Email
           </label>
           <input
@@ -63,7 +69,10 @@ export default function ContactForm() {
         </div>
       </div>
       <div>
-        <label htmlFor="message" className="mb-2 block text-sm text-neutral-300 dark:text-neutral-200">
+        <label
+          htmlFor="message"
+          className="mb-2 block font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--panel-label)]"
+        >
           Your Project
         </label>
         <textarea
@@ -79,20 +88,20 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isLoading}
-        className="w-full rounded-xl bg-white px-8 py-3.5 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-100 disabled:opacity-60 dark:bg-neutral-100 dark:hover:bg-white"
+        className="w-full cursor-pointer rounded-[var(--radius-sm)] bg-[var(--color-primary)] px-8 py-3.5 font-[family-name:var(--font-plus-jakarta)] text-sm font-semibold text-[var(--color-text-inverse)] transition hover:bg-[var(--color-primary-hover)] disabled:opacity-60"
       >
         {isLoading ? "Sending..." : "Submit"}
       </button>
-      {status === "success" && (
-        <p className="text-sm text-emerald-400">
+      {status === "success" ? (
+        <p className="font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--color-teal)]">
           Message sent successfully.
         </p>
-      )}
-      {status === "error" && (
-        <p className="text-sm text-red-400">
+      ) : null}
+      {status === "error" ? (
+        <p className="font-[family-name:var(--font-plus-jakarta)] text-sm text-red-500">
           {errorMessage}
         </p>
-      )}
+      ) : null}
     </form>
   );
 }

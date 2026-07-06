@@ -1,0 +1,69 @@
+{
+  "primary": {
+    "title": "Primary \"Ship Fast\" Stack",
+    "groups": [
+      {
+        "label": "Frontend & Interaction",
+        "items": [
+          { "label": "Next.js", "color": "var(--color-primary)" },
+          { "label": "React", "color": "var(--color-primary)" },
+          { "label": "TypeScript", "color": "var(--color-primary)" },
+          { "label": "Tailwind CSS", "color": "var(--color-primary)" }
+        ]
+      },
+      {
+        "label": "Backend & Database",
+        "items": [
+          { "label": "Node.js", "color": "var(--color-teal)" },
+          { "label": "Express", "color": "var(--color-teal)" },
+          { "label": "PostgreSQL", "color": "var(--color-teal)" },
+          { "label": "MongoDB", "color": "var(--color-teal)" }
+        ]
+      },
+      {
+        "label": "State & Data",
+        "items": [
+          { "label": "Redux Toolkit", "color": "#3B82F6" },
+          { "label": "Zustand", "color": "#3B82F6" }
+        ]
+      },
+      {
+        "label": "Hosting & Tools",
+        "items": [
+          { "label": "Vercel", "color": "#D946EF" },
+          { "label": "Redis", "color": "#D946EF" },
+          { "label": "Nodemailer", "color": "#D946EF" }
+        ]
+      }
+    ]
+  },
+  "other": {
+    "title": "Other Tools & Databases",
+    "groups": [
+      {
+        "label": "Design & UI",
+        "items": [
+          { "label": "Figma", "color": "var(--color-text-muted)" },
+          { "label": "Framer Motion", "color": "var(--color-text-muted)" },
+          { "label": "GSAP", "color": "var(--color-text-muted)" }
+        ]
+      },
+      {
+        "label": "APIs & Integrations",
+        "items": [
+          { "label": "REST APIs", "color": "var(--color-text-muted)" },
+          { "label": "Socket.io", "color": "var(--color-text-muted)" },
+          { "label": "OpenAI API", "color": "var(--color-text-muted)" }
+        ]
+      },
+      {
+        "label": "Runtimes & Dev Tools",
+        "items": [
+          { "label": "Git & GitHub", "color": "var(--color-text-muted)" },
+          { "label": "ESLint", "color": "var(--color-text-muted)" },
+          { "label": "Postman", "color": "var(--color-text-muted)" }
+        ]
+      }
+    ]
+  }
+}

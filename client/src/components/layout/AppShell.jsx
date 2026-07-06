@@ -1,5 +1,4 @@
 import TopNavbar from "@/components/layout/TopNavbar";
-import BottomNav from "@/components/layout/BottomNav";
 import ShellMain from "@/components/layout/ShellMain";
 
 export default function AppShell({ children }) {
@@ -7,7 +6,6 @@ export default function AppShell({ children }) {
     <>
       <TopNavbar />
       <ShellMain>{children}</ShellMain>
-      <BottomNav />
     </>
   );
 }

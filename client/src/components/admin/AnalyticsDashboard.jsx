@@ -41,7 +41,7 @@ export default function AnalyticsDashboard() {
 
   if (loading) {
     return (
-      <div className="mx-auto max-w-6xl px-4 py-12 md:px-6">
+      <div className="mx-auto w-full max-w-[1280px] px-8 py-12">
         <DashboardHeader email={user?.email} onLogout={handleLogout} />
         <DashboardSkeleton />
       </div>
@@ -50,16 +50,16 @@ export default function AnalyticsDashboard() {
 
   if (hasError || !summary || !daily) {
     return (
-      <div className="mx-auto max-w-6xl px-4 py-12 md:px-6">
+      <div className="mx-auto w-full max-w-[1280px] px-8 py-12">
         <DashboardHeader email={user?.email} onLogout={handleLogout} />
-        <div className="rounded-2xl border border-red-200 bg-red-50 p-8 text-center dark:border-red-900 dark:bg-red-950/30">
-          <p className="text-sm text-red-700 dark:text-red-300">
+        <div className="rounded-[var(--radius-lg)] border border-red-200 bg-red-50 p-8 text-center dark:border-red-900/50 dark:bg-red-950/30">
+          <p className="font-[family-name:var(--font-plus-jakarta)] text-sm text-red-600 dark:text-red-400">
             Failed to load analytics data.
           </p>
           <button
             type="button"
             onClick={handleRetry}
-            className="mt-4 rounded-full bg-neutral-900 px-6 py-2 text-sm text-white dark:bg-neutral-100 dark:text-neutral-900"
+            className="mt-4 cursor-pointer rounded-full bg-[var(--color-primary)] px-6 py-2 font-[family-name:var(--font-plus-jakarta)] text-sm font-semibold text-[var(--color-text-inverse)] transition hover:bg-[var(--color-primary-hover)]"
           >
             Retry
           </button>
@@ -69,7 +69,7 @@ export default function AnalyticsDashboard() {
   }
 
   return (
-    <div className="mx-auto max-w-6xl px-4 py-12 md:px-6">
+    <div className="mx-auto w-full max-w-[1280px] px-8 py-12">
       <DashboardHeader email={user?.email} onLogout={handleLogout} />
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <StatCard label="Total Visitors" value={summary.totalVisitors} />
@@ -77,44 +77,52 @@ export default function AnalyticsDashboard() {
         <StatCard label="Total Page Views" value={summary.totalPageViews} />
       </div>
       <div className="mt-10 grid gap-6 lg:grid-cols-2">
-        <div className="rounded-2xl border border-neutral-200 p-6 dark:border-neutral-800">
-          <h2 className="mb-6 text-lg font-medium">Daily Visitors</h2>
+        <Panel title="Daily Visitors">
           {daily.length === 0 ? (
-            <p className="text-sm text-neutral-500">No visitor data yet.</p>
+            <p className="font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--color-text-secondary)]">
+              No visitor data yet.
+            </p>
           ) : (
             <div className="space-y-3">
               {daily.map((day) => (
                 <div key={day.date} className="flex items-center gap-4">
-                  <span className="w-24 shrink-0 text-sm text-neutral-500">{day.date}</span>
+                  <span className="w-24 shrink-0 font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--color-text-muted)]">
+                    {day.date}
+                  </span>
                   <div className="flex-1">
                     <div
-                      className="h-2 rounded-full bg-neutral-900 dark:bg-neutral-100"
+                      className="h-2 rounded-full bg-[var(--color-primary)]"
                       style={{ width: `${Math.min(100, (day.visitors / 50) * 100)}%` }}
                     />
                   </div>
-                  <span className="w-8 text-right text-sm">{day.visitors}</span>
+                  <span className="w-8 text-right font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--color-text-primary)]">
+                    {day.visitors}
+                  </span>
                 </div>
               ))}
             </div>
           )}
-        </div>
-        <div className="rounded-2xl border border-neutral-200 p-6 dark:border-neutral-800">
-          <h2 className="mb-6 text-lg font-medium">Top Referrers</h2>
+        </Panel>
+        <Panel title="Top Referrers">
           {summary.topReferrers.length === 0 ? (
-            <p className="text-sm text-neutral-500">No referrer data yet.</p>
+            <p className="font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--color-text-secondary)]">
+              No referrer data yet.
+            </p>
           ) : (
             <div className="space-y-4">
               {summary.topReferrers.map((ref) => (
-                <div key={ref.referrer} className="flex items-center justify-between">
-                  <span className="text-sm text-neutral-600 dark:text-neutral-400">
+                <div key={ref.referrer} className="flex items-center justify-between gap-4">
+                  <span className="truncate font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--color-text-secondary)]">
                     {ref.referrer}
                   </span>
-                  <span className="text-sm font-medium">{ref.count}</span>
+                  <span className="shrink-0 font-[family-name:var(--font-plus-jakarta)] text-sm font-semibold text-[var(--color-text-primary)]">
+                    {ref.count}
+                  </span>
                 </div>
               ))}
             </div>
           )}
-        </div>
+        </Panel>
       </div>
     </div>
   );
@@ -124,17 +132,17 @@ function DashboardHeader({ email, onLogout }) {
   return (
     <div className="mb-10 flex flex-wrap items-center justify-between gap-4">
       <div>
-        <h1 className="text-3xl font-semibold text-neutral-900 dark:text-neutral-50">
+        <h1 className="font-[family-name:var(--font-outfit)] text-3xl font-semibold text-[var(--color-text-primary)]">
           Analytics
         </h1>
-        <p className="mt-1 text-sm text-neutral-500 dark:text-neutral-400">
+        <p className="mt-1 font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--color-text-secondary)]">
           Signed in as {email}
         </p>
       </div>
       <button
         type="button"
         onClick={onLogout}
-        className="rounded-full border border-neutral-300 px-5 py-2 text-sm transition hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-900"
+        className="cursor-pointer rounded-full border border-[var(--color-border-subtle)] bg-[var(--color-surface)] px-5 py-2 font-[family-name:var(--font-plus-jakarta)] text-sm font-medium text-[var(--color-text-secondary)] transition hover:border-[var(--color-text-primary)] hover:text-[var(--color-text-primary)]"
       >
         Logout
       </button>
@@ -144,11 +152,24 @@ function DashboardHeader({ email, onLogout }) {
 
 function StatCard({ label, value }) {
   return (
-    <div className="rounded-2xl border border-neutral-200 p-6 dark:border-neutral-800">
-      <p className="text-sm text-neutral-500 dark:text-neutral-400">{label}</p>
-      <p className="mt-2 text-3xl font-semibold text-neutral-900 dark:text-neutral-50">
+    <div className="rounded-[var(--radius-lg)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-6 transition-all duration-[var(--duration-fast)] hover:shadow-[var(--shadow-sm)]">
+      <p className="font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--color-text-secondary)]">
+        {label}
+      </p>
+      <p className="mt-2 font-[family-name:var(--font-outfit)] text-3xl font-semibold text-[var(--color-text-primary)]">
         {value.toLocaleString()}
       </p>
+    </div>
+  );
+}
+
+function Panel({ title, children }) {
+  return (
+    <div className="rounded-[var(--radius-lg)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-6">
+      <h2 className="mb-6 font-[family-name:var(--font-outfit)] text-lg font-semibold text-[var(--color-text-primary)]">
+        {title}
+      </h2>
+      {children}
     </div>
   );
 }
@@ -157,13 +178,13 @@ function DashboardSkeleton() {
   return (
     <div className="space-y-6">
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        <Skeleton className="h-28 rounded-2xl" />
-        <Skeleton className="h-28 rounded-2xl" />
-        <Skeleton className="h-28 rounded-2xl" />
+        <Skeleton className="h-28 rounded-[var(--radius-lg)]" />
+        <Skeleton className="h-28 rounded-[var(--radius-lg)]" />
+        <Skeleton className="h-28 rounded-[var(--radius-lg)]" />
       </div>
       <div className="grid gap-6 lg:grid-cols-2">
-        <Skeleton className="h-64 rounded-2xl" />
-        <Skeleton className="h-64 rounded-2xl" />
+        <Skeleton className="h-64 rounded-[var(--radius-lg)]" />
+        <Skeleton className="h-64 rounded-[var(--radius-lg)]" />
       </div>
     </div>
   );

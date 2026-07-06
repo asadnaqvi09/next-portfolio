@@ -22,7 +22,7 @@ export default function AdminDashboardPage() {
 
   if (!token || isLoading) {
     return (
-      <div className="flex min-h-[70vh] flex-col items-center justify-center px-4">
+      <div className="flex min-h-[70vh] flex-col items-center justify-center px-8 py-16">
         <LoginFormSkeleton />
       </div>
     );
