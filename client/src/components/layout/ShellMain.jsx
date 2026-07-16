@@ -1,3 +1,7 @@
 export default function ShellMain({ children }) {
-  return <main>{children}</main>;
+  return (
+    <main id="top" className="shell-main">
+      {children}
+    </main>
+  );
 }

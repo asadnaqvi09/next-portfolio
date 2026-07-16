@@ -1,0 +1,82 @@
+[
+  {
+    "id": "languages",
+    "title": "Languages",
+    "subtitle": "core syntax",
+    "icon": "code",
+    "wide": false,
+    "items": [
+      { "name": "JavaScript", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+      { "name": "TypeScript", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
+      { "name": "Dart", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" },
+      { "name": "SQL", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" }
+    ]
+  },
+  {
+    "id": "frontend",
+    "title": "Frontend & UI",
+    "subtitle": "interfaces",
+    "icon": "monitor",
+    "wide": false,
+    "items": [
+      { "name": "React", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+      { "name": "Next.js", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
+      { "name": "Tailwind", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+      { "name": "Flutter", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" }
+    ]
+  },
+  {
+    "id": "backend",
+    "title": "Backend & APIs",
+    "subtitle": "server engineering",
+    "icon": "server",
+    "wide": false,
+    "items": [
+      { "name": "Node.js", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
+      { "name": "Express", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" },
+      { "name": "Socket.io", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/socketio/socketio-original.svg" },
+      { "name": "REST", "logo": "" }
+    ]
+  },
+  {
+    "id": "data",
+    "title": "Data & caching",
+    "subtitle": "storage layer",
+    "icon": "database",
+    "wide": false,
+    "items": [
+      { "name": "PostgreSQL", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
+      { "name": "MongoDB", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
+      { "name": "Redis", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" },
+      { "name": "SQLite", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" }
+    ]
+  },
+  {
+    "id": "tools",
+    "title": "Cloud & tools",
+    "subtitle": "deploy & ship",
+    "icon": "cloud",
+    "wide": false,
+    "items": [
+      { "name": "Git", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
+      { "name": "GitHub", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
+      { "name": "Docker", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
+      { "name": "Vercel", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" }
+    ]
+  },
+  {
+    "id": "integrations",
+    "title": "APIs & integrations",
+    "subtitle": "connect everything",
+    "icon": "api",
+    "wide": true,
+    "items": [
+      { "name": "REST APIs", "logo": "" },
+      { "name": "Redux", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" },
+      { "name": "OpenAI", "logo": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" },
+      { "name": "Nodemailer", "logo": "" },
+      { "name": "GSAP", "logo": "" },
+      { "name": "Framer", "logo": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg" }
+    ]
+  }
+]

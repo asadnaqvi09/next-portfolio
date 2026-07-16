@@ -1,132 +1,79 @@
-"use client";
-
-import { useCallback, useEffect, useMemo, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import { FolderOpen } from "lucide-react";
 import { getFeaturedProjects } from "@/lib/content";
-import { WORK_FILTERS } from "@/lib/constants";
-import Section from "@/components/ui/Section";
-import Eyebrow from "@/components/ui/Eyebrow";
-import WorkCard from "@/components/landing/Work/WorkCard";
-import { cn } from "@/lib/utils";
+import Reveal from "@/components/ui/Reveal";
+
+function padNum(n) {
+  return String(n).padStart(2, "0");
+}
 
 export default function WorkSection() {
-  const projects = useMemo(() => getFeaturedProjects(), []);
-  const [activeFilter, setActiveFilter] = useState("All");
-  const filtered = useMemo(() => {
-    if (activeFilter === "All") return projects;
-    return projects.filter((p) => p.filters.includes(activeFilter));
-  }, [projects, activeFilter]);
-  const hasProjects = filtered.length > 0;
-  const [emblaRef, emblaApi] = useEmblaCarousel({ align: "start", loop: false, containScroll: "trimSnaps" });
-  const [selectedIndex, setSelectedIndex] = useState(0);
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi || !hasProjects) return;
-    onSelect();
-    emblaApi.on("select", onSelect);
-    emblaApi.on("reInit", onSelect);
-    return () => {
-      emblaApi.off("select", onSelect);
-      emblaApi.off("reInit", onSelect);
-    };
-  }, [emblaApi, onSelect, hasProjects]);
-
-  useEffect(() => {
-    if (!emblaApi || !hasProjects) {
-      setSelectedIndex(0);
-      return;
-    }
-    emblaApi.reInit();
-    emblaApi.scrollTo(0);
-    setSelectedIndex(0);
-  }, [emblaApi, filtered, hasProjects]);
-
-  const scrollTo = useCallback(
-    (index) => {
-      emblaApi?.scrollTo(index);
-    },
-    [emblaApi]
-  );
+  const projects = getFeaturedProjects();
 
   return (
-    <Section id="work" className="border-t border-[var(--color-border-subtle)] py-24">
-      <div className="mb-12 text-center">
-        <Eyebrow className="mb-6">Recent Projects</Eyebrow>
-        <h2 className="mb-8 font-[family-name:var(--font-outfit)] text-[clamp(2rem,3.8vw,3.5rem)] leading-[1.15] font-semibold tracking-tight text-[var(--color-text-primary)]">
-          Shipped and live
-        </h2>
-        <div className="mx-auto flex max-w-2xl flex-wrap items-center justify-center gap-3">
-          {WORK_FILTERS.map((filter) => (
-            <button
-              key={filter}
-              type="button"
-              onClick={() => setActiveFilter(filter)}
-              aria-pressed={activeFilter === filter}
-              className={cn(
-                "cursor-pointer rounded-full px-5 py-2 font-[family-name:var(--font-plus-jakarta)] text-xs font-semibold tracking-wide transition-all duration-[var(--duration-fast)] ease-[var(--ease-smooth)]",
-                activeFilter === filter
-                  ? "border border-transparent bg-[var(--color-primary)] text-[var(--color-text-inverse)] shadow-[var(--shadow-sm)]"
-                  : "border border-[var(--color-border-subtle)] bg-[var(--color-surface)] text-[var(--color-text-secondary)] hover:border-[var(--color-text-primary)] hover:text-[var(--color-text-primary)]"
-              )}
-            >
-              {filter}
-            </button>
-          ))}
+    <section id="work" className="work">
+      <div className="wrap">
+        <Reveal className="section-head-block">
+          <span className="eyebrow">What I&apos;ve built</span>
+          <h2 className="section-title">Selected work</h2>
+          <p className="section-lead">
+            Production and in-progress systems — ecommerce storefronts, clinic sites, digital marketplaces, and edtech platforms.
+          </p>
+        </Reveal>
+
+        <div className="work__list">
+          {projects.map((project, i) => {
+            const href = project.liveUrl || project.githubUrl;
+            const status = project.status || [];
+            const metrics = project.metrics || [
+              { label: "Category", value: project.category },
+              { label: "Year", value: project.year },
+              { label: "Type", value: project.filters?.[0] || "Web" },
+            ];
+
+            return (
+              <Reveal key={project.id} as="article" className="proj" delay={Math.min(i % 3, 2)}>
+                <div className="proj__num">{`{ ${padNum(i + 1)} }`}</div>
+                <div className="proj__main">
+                  <div className="proj__head">
+                    <h3 className="proj__title">
+                      {href ? (
+                        <a href={href} target="_blank" rel="noopener noreferrer">
+                          {project.title}
+                          <svg className="ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                            <path d="M7 17 17 7M9 7h8v8" />
+                          </svg>
+                        </a>
+                      ) : (
+                        <span>{project.title}</span>
+                      )}
+                    </h3>
+                    {status.map((tag) => (
+                      <span key={tag} className={`proj__tag${tag === "live" ? " live" : ""}`}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="proj__desc">{project.description}</p>
+                  <div className="proj__stack">
+                    {(project.tags || []).map((t) => (
+                      <span key={t}>{t}</span>
+                    ))}
+                  </div>
+                </div>
+                <div className="proj__metrics">
+                  {metrics.map((m) => (
+                    <div className="proj__metric" key={m.label}>
+                      <span className="label">{m.label}</span>
+                      <span className="value">
+                        <span className="accent">{m.value}</span>
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
-      {!hasProjects ? (
-        <div className="flex flex-col items-center justify-center gap-4 rounded-[var(--radius-lg)] border border-dashed border-[var(--color-border-subtle)] bg-[var(--color-surface)] px-8 py-20 text-center">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[var(--color-border-subtle)] bg-[var(--color-surface-alt)] text-[var(--color-text-muted)]">
-            <FolderOpen className="h-5 w-5" />
-          </div>
-          <p className="font-[family-name:var(--font-plus-jakarta)] text-base font-medium text-[var(--color-text-primary)]">
-            No projects currently available
-          </p>
-          <p className="max-w-sm font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--color-text-secondary)]">
-            There are no projects in the {activeFilter} category right now. Try another filter.
-          </p>
-        </div>
-      ) : (
-        <div className="w-full overflow-hidden rounded-[var(--radius-lg)]">
-          <div ref={emblaRef} className="w-full overflow-hidden">
-            <div className="flex w-full">
-              {filtered.map((project) => (
-                <div
-                  key={project.id}
-                  className="min-w-0 shrink-0 grow-0 basis-full px-3"
-                >
-                  <WorkCard project={project} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-      {hasProjects ? (
-        <div className="mt-12 flex items-center justify-center gap-2">
-          {filtered.map((project, index) => (
-            <button
-              key={project.id}
-              type="button"
-              onClick={() => scrollTo(index)}
-              aria-label={`Go to slide ${index + 1}`}
-              aria-current={selectedIndex === index}
-              className={cn(
-                "h-2 cursor-pointer rounded-full transition-all duration-[var(--duration-fast)]",
-                selectedIndex === index
-                  ? "w-6 bg-[var(--color-primary)]"
-                  : "w-2 bg-[var(--color-border-subtle)] hover:bg-[var(--color-text-muted)]"
-              )}
-            />
-          ))}
-        </div>
-      ) : null}
-    </Section>
+    </section>
   );
 }

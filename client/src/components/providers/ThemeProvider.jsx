@@ -10,12 +10,16 @@ export default function ThemeProvider({ children }) {
 
   useEffect(() => {
     const stored = localStorage.getItem("theme");
-    if (stored) dispatch(setTheme(stored));
+    if (stored === "light" || stored === "dark") dispatch(setTheme(stored));
   }, [dispatch]);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
     localStorage.setItem("theme", theme);
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) {
+      meta.setAttribute("content", theme === "dark" ? "#0a0a0b" : "#f4f4f5");
+    }
   }, [theme]);
 
   return <>{children}</>;

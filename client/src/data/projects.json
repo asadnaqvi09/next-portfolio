@@ -11,8 +11,14 @@
     "featured": true,
     "order": 1,
     "filters": ["Website"],
+    "status": ["live", "flagship"],
     "description": "A full-featured ecommerce storefront with product browsing, cart management, and a responsive shopping experience built for performance across devices.",
-    "tags": ["Next.js", "React", "Tailwind CSS", "Node.js", "MongoDB", "Redux Toolkit"]
+    "tags": ["Next.js", "React", "Tailwind CSS", "Node.js", "MongoDB", "Redux Toolkit"],
+    "metrics": [
+      { "label": "Stack", "value": "MERN · Next" },
+      { "label": "Surface", "value": "store + cart" },
+      { "label": "Status", "value": "live" }
+    ]
   },
   {
     "id": "dental",
@@ -26,8 +32,14 @@
     "featured": true,
     "order": 2,
     "filters": ["Website"],
+    "status": ["live", "healthcare"],
     "description": "A conversion-focused clinic website with service highlights, appointment flows, and a clean layout designed to build patient trust.",
-    "tags": ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"]
+    "tags": ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
+    "metrics": [
+      { "label": "Focus", "value": "conversion" },
+      { "label": "Type", "value": "landing" },
+      { "label": "Status", "value": "live" }
+    ]
   },
   {
     "id": "game-vault",
@@ -41,8 +53,14 @@
     "featured": true,
     "order": 3,
     "filters": ["Website"],
+    "status": ["live", "e-commerce"],
     "description": "An ecommerce platform for digital game keys with catalog browsing, cart checkout, and an admin-friendly product management flow.",
-    "tags": ["Next.js", "JavaScript", "Tailwind CSS", "PostgreSQL"]
+    "tags": ["Next.js", "JavaScript", "Tailwind CSS", "PostgreSQL"],
+    "metrics": [
+      { "label": "Catalog", "value": "digital keys" },
+      { "label": "DB", "value": "PostgreSQL" },
+      { "label": "Status", "value": "live" }
+    ]
   },
   {
     "id": "edtech-app",
@@ -50,14 +68,20 @@
     "subtitle": "AI-Powered IELTS and PTE Preparation App",
     "category": "EdTech",
     "year": "In-Progress",
-    "thumbnail": "/assets/image-4.jpg",
+    "thumbnail": "/assets/image-4.JPG",
     "liveUrl": "https://github.com/asadnaqvi09/Testiva---AI-Powered-IELTS-and-PTE-Preparation",
     "githubUrl": "https://github.com/asadnaqvi09/Testiva---AI-Powered-IELTS-and-PTE-Preparation",
     "featured": true,
     "order": 4,
     "filters": ["App"],
-    "description": "Testiva is B2C Mobile App Designed To Solve High Cost Issues Students Face when they started to prepare for IELTS and PTE.",
-    "tags": ["Flutter", "Node.js", "Express", "PostgreSQL", "Tailwind CSS"]
+    "status": ["in-progress", "edtech"],
+    "description": "Testiva is a B2C mobile app designed to solve high-cost issues students face when they start preparing for IELTS and PTE — AI-assisted practice with a full backend.",
+    "tags": ["Flutter", "Node.js", "Express", "PostgreSQL"],
+    "metrics": [
+      { "label": "Platform", "value": "Flutter" },
+      { "label": "AI", "value": "integrated" },
+      { "label": "Status", "value": "building" }
+    ]
   },
   {
     "id": "edtech-admin_panel",
@@ -65,13 +89,19 @@
     "subtitle": "Admin Panel for Testiva",
     "category": "EdTech",
     "year": "In-Progress",
-    "thumbnail": "/assets/image-4.jpg",
+    "thumbnail": "/assets/image-4.JPG",
     "liveUrl": "https://github.com/asadnaqvi09/Testiva---AI-Powered-IELTS-and-PTE-Preparation/tree/main/Admin-Prototype",
     "githubUrl": "https://github.com/asadnaqvi09/Testiva---AI-Powered-IELTS-and-PTE-Preparation/tree/main/Admin-Prototype",
     "featured": true,
     "order": 5,
     "filters": ["Dashboard"],
-    "description": "Admin Panel for Testiva App to manage users, courses, and payments.",
-    "tags": ["React", "Node.js", "Express", "PostgreSQL", "Tailwind CSS"]
+    "status": ["in-progress", "dashboard"],
+    "description": "Admin panel for Testiva to manage users, courses, and payments — role-aware ops surface for the edtech product.",
+    "tags": ["React", "Node.js", "Express", "PostgreSQL", "Tailwind CSS"],
+    "metrics": [
+      { "label": "Surface", "value": "admin" },
+      { "label": "Stack", "value": "React · API" },
+      { "label": "Status", "value": "building" }
+    ]
   }
 ]

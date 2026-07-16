@@ -1,0 +1,44 @@
+[
+  {
+    "id": "freelance",
+    "role": "Full Stack Developer",
+    "company": "Freelance / Independent",
+    "location": "Remote",
+    "date": "2024 — Present",
+    "current": true,
+    "initials": "FS",
+    "bullets": [
+      "Shipped production ecommerce and product sites including <strong>Baazarly</strong>, <strong>Game Vault</strong>, and clinic landing experiences — conversion-focused UI with solid backend foundations.",
+      "Building <strong>Testiva</strong>, an AI-powered IELTS/PTE preparation app (Flutter + Node) with an admin panel for courses, users, and payments.",
+      "Delivered MVPs with clean modular architecture — Next.js/React frontends, Express APIs, PostgreSQL/MongoDB — optimized for handoff and iteration."
+    ]
+  },
+  {
+    "id": "mern",
+    "role": "MERN Stack Developer",
+    "company": "Personal & Client Projects",
+    "location": "Pakistan",
+    "date": "2023 — 2024",
+    "current": false,
+    "initials": "MS",
+    "bullets": [
+      "Built full-stack apps with user auth, product catalogs, carts, and admin flows using React, Node.js, Express, and MongoDB.",
+      "Focused on responsive layouts, performance, and maintainable codebases any developer can extend.",
+      "Integrated third-party APIs and practical AI features for text analysis and task generation."
+    ]
+  },
+  {
+    "id": "foundations",
+    "role": "Web Developer",
+    "company": "Learning & Early Projects",
+    "location": "Pakistan",
+    "date": "2022 — 2023",
+    "current": false,
+    "initials": "WD",
+    "bullets": [
+      "Learned modern web fundamentals — JavaScript, React, Node, databases — by shipping small products end-to-end.",
+      "Practiced security-first patterns: validated inputs, session handling, and data isolation.",
+      "Built a habit of clean UI, SEO-aware pages, and micro-interactions that feel intentional."
+    ]
+  }
+]

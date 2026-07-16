@@ -1,18 +1,18 @@
-import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import ClientProviders from "@/components/providers/ClientProviders";
 import AppShell from "@/components/layout/AppShell";
 import { site } from "@/lib/content";
 
-const outfit = Outfit({
+const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-outfit",
+  variable: "--font-inter",
   display: "swap",
 });
 
-const plusJakarta = Plus_Jakarta_Sans({
+const jetbrains = JetBrains_Mono({
   subsets: ["latin"],
-  variable: "--font-plus-jakarta",
+  variable: "--font-jetbrains",
   display: "swap",
 });
 
@@ -30,8 +30,11 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${outfit.variable} ${plusJakarta.variable}`}
+      className={`${inter.variable} ${jetbrains.variable}`}
     >
+      <head>
+        <meta name="theme-color" content="#f4f4f5" />
+      </head>
       <body className="flex min-h-dvh flex-col antialiased">
         <ClientProviders>
           <AppShell>{children}</AppShell>

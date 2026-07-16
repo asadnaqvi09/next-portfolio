@@ -1,20 +1,20 @@
 import HeroSection from "@/components/landing/Hero/HeroSection";
-import CapabilitiesSection from "@/components/landing/Capabilities/CapabilitiesSection";
-import ProcessSection from "@/components/landing/Process/ProcessSection";
+import MarqueeSection from "@/components/landing/Marquee/MarqueeSection";
+import AboutSection from "@/components/landing/About/AboutSection";
+import SkillsSection from "@/components/landing/Skills/SkillsSection";
+import ExperienceSection from "@/components/landing/Experience/ExperienceSection";
 import WorkSection from "@/components/landing/Work/WorkSection";
-import StackSection from "@/components/landing/Stack/StackSection";
-import FaqSection from "@/components/landing/Faq/FaqSection";
 import ContactSection from "@/components/landing/Contact/ContactSection";
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <CapabilitiesSection />
-      <ProcessSection />
+      <MarqueeSection />
+      <AboutSection />
+      <SkillsSection />
+      <ExperienceSection />
       <WorkSection />
-      <StackSection />
-      <FaqSection />
       <ContactSection />
     </>
   );

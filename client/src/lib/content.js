@@ -1,15 +1,11 @@
 import siteData from "@/data/site.json";
-import capabilitiesData from "@/data/capabilities.json";
-import processData from "@/data/process.json";
-import stackData from "@/data/stack.json";
-import faqData from "@/data/faq.json";
+import skillsData from "@/data/skills.json";
+import experienceData from "@/data/experience.json";
 import projectsData from "@/data/projects.json";
 
 export const site = siteData;
-export const capabilities = capabilitiesData;
-export const process = processData;
-export const stack = stackData;
-export const faq = faqData;
+export const skills = skillsData;
+export const experience = experienceData;
 export const projects = projectsData;
 
 export function getFeaturedProjects() {

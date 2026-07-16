@@ -1,30 +1,52 @@
 {
   "name": "Asad Abbas",
+  "shortName": "Asad",
   "title": "Full Stack Developer",
   "tagline": "Hey! I'm Asad, a builder focused on clean, scalable digital products.",
   "about": "I'm a full stack developer with a strong focus on building modern, scalable, and conversion-driven web experiences. Over the years, I've shipped products across ecommerce, ed-tech, and product design helping teams launch faster with clarity, structured systems, and intentional design.",
+  "aboutExtended": [
+    "Engineer and product builder — focused on <strong>full-stack web apps</strong>, landing pages, and admin dashboards that ship clean and stay maintainable.",
+    "I specialize in systems that don't just look good — they <span class=\"hl\">scale</span>: Node/Express APIs, React & Next.js frontends, PostgreSQL and MongoDB, and practical AI integrations.",
+    "I care about query latency, clean architecture, and writing code the next engineer can actually read."
+  ],
   "hero": {
-    "eyebrow": "Fast & Clean MVPs",
-    "headline": [
-      "Need a web app, landing page, or dashboard?",
-      "Built fast and built right."
-    ],
-    "subtext": "I help founders and teams launch MVPs fast — clean, organized code any developer can maintain."
+    "badge": "Available for freelance & full-time roles",
+    "headline": "Asad Abbas",
+    "roles": ["Full Stack Developer", "MVP Builder", "AI Integrations"],
+    "subtext": "I build the web apps that have to <strong>ship fast without breaking</strong> — ecommerce storefronts, ed-tech platforms, dashboards and AI-powered products. Clean architecture, conversion-focused UI, and code any team can maintain.",
+    "floats": ["Clean MVPs", "Full-stack ready"]
   },
+  "stats": [
+    { "value": "03", "suffix": "+", "label": "Years exp" },
+    { "value": "10", "suffix": "+", "label": "Projects" },
+    { "value": "05", "suffix": "+", "label": "Products" },
+    { "value": "MERN", "suffix": "", "label": "Core stack" }
+  ],
+  "location": "Pakistan",
   "email": "nasad8569@gmail.com",
+  "phone": "",
+  "education": "Computer Science",
+  "portrait": "/assets/Hero-Image.jpg",
   "resumePath": "/assets/Asad_Abbas.pdf",
   "socials": {
     "linkedin": "https://www.linkedin.com/in/asad-naqvi-84ba14282/",
     "github": "https://github.com/asadnaqvi09",
     "instagram": "https://www.instagram.com/asadnaqvi09/"
   },
-  "techPills": [
-    { "label": "JavaScript", "color": "#F7DF1E" },
-    { "label": "TypeScript", "color": "#3178C6" },
-    { "label": "PostgreSQL", "color": "#336791" },
-    { "label": "Next.js", "color": "var(--color-primary)" },
-    { "label": "React", "color": "var(--color-teal)" },
-    { "label": "Tailwind CSS", "color": "#38BDF8" },
-    { "label": "Node.js", "color": "#68A063" }
+  "marquee": [
+    { "name": "JavaScript", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+    { "name": "TypeScript", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
+    { "name": "React", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+    { "name": "Next.js", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
+    { "name": "Node.js", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" },
+    { "name": "Express", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" },
+    { "name": "PostgreSQL", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
+    { "name": "MongoDB", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
+    { "name": "Redis", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-original.svg" },
+    { "name": "Tailwind", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+    { "name": "Flutter", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" },
+    { "name": "Docker", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
+    { "name": "Git", "src": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
+    { "name": "OpenAI", "src": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" }
   ]
 }

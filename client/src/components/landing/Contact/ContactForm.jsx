@@ -27,19 +27,11 @@ export default function ContactForm() {
     }
   };
 
-  const inputClass =
-    "w-full rounded-[var(--radius-sm)] border border-[var(--panel-input-border)] bg-[var(--panel-input-bg)] px-4 py-3.5 font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--panel-input-text)] outline-none transition placeholder:text-[var(--panel-input-placeholder)] focus:border-[var(--color-primary)]";
-
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div className="grid gap-6 sm:grid-cols-2">
-        <div>
-          <label
-            htmlFor="name"
-            className="mb-2 block font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--panel-label)]"
-          >
-            Name
-          </label>
+    <form onSubmit={handleSubmit} className="contact-form">
+      <div className="form-row">
+        <div className="field">
+          <label htmlFor="name">Name</label>
           <input
             id="name"
             type="text"
@@ -47,16 +39,10 @@ export default function ContactForm() {
             placeholder="Enter your name"
             value={form.name}
             onChange={(e) => setForm({ ...form, name: e.target.value })}
-            className={inputClass}
           />
         </div>
-        <div>
-          <label
-            htmlFor="email"
-            className="mb-2 block font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--panel-label)]"
-          >
-            Email
-          </label>
+        <div className="field">
+          <label htmlFor="email">Email</label>
           <input
             id="email"
             type="email"
@@ -64,17 +50,11 @@ export default function ContactForm() {
             placeholder="Enter your email"
             value={form.email}
             onChange={(e) => setForm({ ...form, email: e.target.value })}
-            className={inputClass}
           />
         </div>
       </div>
-      <div>
-        <label
-          htmlFor="message"
-          className="mb-2 block font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--panel-label)]"
-        >
-          Your Project
-        </label>
+      <div className="field">
+        <label htmlFor="message">Your Project</label>
         <textarea
           id="message"
           required
@@ -82,26 +62,13 @@ export default function ContactForm() {
           placeholder="Tell me about your project"
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
-          className={`${inputClass} resize-none`}
         />
       </div>
-      <button
-        type="submit"
-        disabled={isLoading}
-        className="w-full cursor-pointer rounded-[var(--radius-sm)] bg-[var(--color-primary)] px-8 py-3.5 font-[family-name:var(--font-plus-jakarta)] text-sm font-semibold text-[var(--color-text-inverse)] transition hover:bg-[var(--color-primary-hover)] disabled:opacity-60"
-      >
+      <button type="submit" disabled={isLoading} className="submit-btn">
         {isLoading ? "Sending..." : "Submit"}
       </button>
-      {status === "success" ? (
-        <p className="font-[family-name:var(--font-plus-jakarta)] text-sm text-[var(--color-teal)]">
-          Message sent successfully.
-        </p>
-      ) : null}
-      {status === "error" ? (
-        <p className="font-[family-name:var(--font-plus-jakarta)] text-sm text-red-500">
-          {errorMessage}
-        </p>
-      ) : null}
+      {status === "success" ? <p className="form-msg ok">Message sent successfully.</p> : null}
+      {status === "error" ? <p className="form-msg err">{errorMessage}</p> : null}
     </form>
   );
 }
